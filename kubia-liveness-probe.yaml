@@ -1,0 +1,12 @@
+apiVeriosn: v1
+kind: pod
+metadata:
+    name: kubia-liveness
+spec:
+    containers:
+    -   iamge: luksa/kubia-unhealthy
+        name: kubia
+        livenessProbe:
+            httpGet:
+                path: /
+                port: 8080
